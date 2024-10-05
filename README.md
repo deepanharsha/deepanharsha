@@ -2,9 +2,9 @@
 
 - 🔭 I’m currently working on: My Projects [DisCam](https://discam.vercel.app/?from=GithubAboutMe) , [ProjectYTGET](https://github.com/hdcodesOfficial/ProjectYTGet) & [Dragonry Books](https://dragonbooks.vercel.app/?from=GithubAboutMe)
 - 🌱 I’m currently learning: How to Work with Python , How to Hack Using BEeF etc.
-- 📫 How to reach me: Reach Me with [My Instagram](https://instagram.com/deepan_harsha) or [My Twitter](https://twitter.com/notshoelaze)
+- 📫 How to reach me: Reach Me with [My Instagram](https://instagram.com/harsha_uchiha11) or [My Twitter](https://twitter.com/notshoelaze)
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: (i am extremely lazy to use my mind)
+- ⚡ Fun fact: 0_o  
 
 ### Languages I Know
 **Coding Languages:**
