@@ -77,26 +77,28 @@ export default function ContactSection() {
 								</motion.a>
 								
 								<motion.a 
-								  href="https://www.instagram.com/notharsha7"
-								  target="_blank"
-								  rel="noopener noreferrer"
-								  className="flex items-center gap-3 p-2 bg-gray-700/50 rounded-lg group-hover:bg-gray-600/50 transition-colors"
-								>
-								  <div>
-								    <svg 
-								      className="w-5 h-5 text-pink-400" 
-								      fill="currentColor" 
-								      viewBox="0 0 24 24" 
-								      xmlns="http://www.w3.org/2000/svg"
-								    >
-								      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"/>
-								    </svg>
-								  </div>
-								  <div>
-								    <p className="font-semibold text-gray-200">Instagram</p>
-								    <p className="text-sm text-gray-400">@notharsha7</p>
-								  </div>
-								</motion.a>
+							  href="https://www.instagram.com/notharsha7"
+							  target="_blank"
+							  rel="noopener noreferrer"
+							  whileHover={{ scale: 1.05 }}
+							  className="flex items-center gap-3 px-4 py-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors border border-gray-700/50 group"
+							>
+							  <div className="p-2 bg-gray-700/50 rounded-lg group-hover:bg-gray-600/50 transition-colors">
+							    <svg 
+							      className="w-5 h-5 text-pink-400" 
+							      fill="currentColor" 
+							      viewBox="0 0 24 24" 
+							      xmlns="http://www.w3.org/2000/svg"
+							    >
+							      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.25-2a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"/>
+							    </svg>
+							  </div>
+							  <div>
+							    <p className="font-semibold text-gray-200">Instagram</p>
+							    <p className="text-sm text-gray-400">@notharsha7</p>
+							  </div>
+							</motion.a>
+
 								
 								<motion.a
 									href="https://x.com/deepan_harsha"
