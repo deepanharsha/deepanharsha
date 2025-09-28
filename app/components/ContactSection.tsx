@@ -37,11 +37,11 @@ export default function ContactSection() {
 							</div>
 							<p className="text-green-500 mt-8 mb-2">$ contact --email</p>
 							<motion.a
-								href="mailto:theprojektmakers@gmail.com"
+								href="mailto:harshadeepan11@gmail.com"
 								whileHover={{ scale: 1.02 }}
 								className="inline-block px-6 py-3 bg-green-500/10 text-green-400 rounded-lg border border-green-500/20 hover:bg-green-500/20 transition-colors"
 							>
-								theprojektmakers@gmail.com (Project Related)  <br />
+								harshadeepan11@gmail.com <br />
 							</motion.a>
 							{/*
 							<p className="text-green-500 mt-8 mb-2">$ cat resume.pdf</p>
