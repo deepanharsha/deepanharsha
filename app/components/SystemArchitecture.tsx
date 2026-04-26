@@ -1,40 +1,59 @@
 'use client';
-
 import { motion } from 'framer-motion';
+import React from 'react';
+
+type Project = {
+	title: string;
+	description: string;
+	details: React.ReactNode[];
+	tech: string[];
+};
 
 export default function SystemArchitecture() {
+	const projects: Project[] = [
+		{
+			title: 'Blue Horizon WT-172',
+			description: 'It is a Fixed-wing model aircraft, weighing about 1 kg',
+			details: [
+				'It Jumped (flying in progress...)',
+				'In Prototyping Stage.',
+				'Inspired From a Cessna 172',
+				<>Learn more on: <a href="https://bluehorizonair.vercel.app/" className="text-blue-400 underline">Blue Horizon Website</a></>,
+			],
+			tech: ['AFDHS', 'Electronics', 'Aeromodelling'],
+		},
+		{
+			title: 'Project YTGet',
+			description: 'Made a YouTube video downloader which downloads videos in high quality.',
+			details: [
+				'Implemented video downloading functionality.',
+				'Designed a Proper UI.',
+				'Prototyped the application architecture.',
+				'Implemented Proper Video Quality Importing.',
+			],
+			tech: ['Python', 'Web APIs'],
+		},
+		{
+			title: 'TriSense AutoFan',
+			description: 'Built a Automatic Detection fan which rotates to the detected person and adjusts its speed according to the ambient temperature.',
+			details: [
+				'Implemented Proper motion detection algorithms.',
+				'Added Foolproof mechanisms.',
+				'Debugged and Finished project within 1 Week.',
+				'Added Debounce and Noise Reduction.',
+			],
+			tech: ['Arduino', 'C++', 'Hardware'],
+		},
+	];
+
 	return (
 		<section className="py-20 px-4">
 			<div className="max-w-6xl mx-auto">
 				<motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} className="text-3xl font-bold mb-12 text-center">
 					Projects
 				</motion.h2>
-
 				<div className="grid grid-cols-1 gap-8">
-					{[
-						{
-							title: 'Project YTGet',
-							description: 'Made a YouTube video downloader which downloads videos in high quality.',
-							details: [
-								'Implemented video downloading functionality.',
-								'Designed a Proper UI.',
-								'Prototyped the application architecture.',
-								'Implemented Proper Video Quality Importing.',
-							],
-							tech: ['Python', 'Web APIs'],
-						},
-						{
-							title: 'TriSense AutoFan',
-							description: 'Built a Automatic Detection fan which rotates to the detected person and adjusts its speed according to the ambient temperature.',
-							details: [
-								'Implemented Proper motion detection algorithms.',
-								'Added Foolproof mechanisms.',
-								'Debugged and Finished project within 1 Week.',
-								'Added Debounce and Noise Reduction.',
-							],
-							tech: ['Arduino', 'C++', 'Hardware'],
-						},
-					].map((project, index) => (
+					{projects.map((project, index) => (
 						<motion.div
 							key={index}
 							initial={{ opacity: 0, y: 20 }}
