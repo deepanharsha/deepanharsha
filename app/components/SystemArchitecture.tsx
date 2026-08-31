@@ -15,6 +15,9 @@ const statusConfig = {
   active: { label: 'active', color: '#4ade80' },
   complete: { label: 'complete', color: '#60a5fa' },
   wip: { label: 'in progress', color: '#fbbf24' },
+  dpd: { label: 'dropped', color: '#f87171' },
+  oh: { label: 'on hold', color: '#facc15' },
+  dp: { label: 'deprecated', color: '#9ca3af' },
 };
 
 const projects: Project[] = [
@@ -34,7 +37,7 @@ const projects: Project[] = [
       </>,
     ],
     tech: ['AFDHS', 'Electronics', 'Aeromodelling'],
-    status: 'wip',
+    status: 'dpd',
   },
   {
     title: 'YTGet',
@@ -46,7 +49,7 @@ const projects: Project[] = [
       'Implemented robust error handling & retry logic',
     ],
     tech: ['Python', 'Web APIs'],
-    status: 'complete',
+    status: 'dp',
   },
   {
     title: 'TriSense AutoFan',

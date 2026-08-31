@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: 'M Harsha Deepan - Hobbyist Portfolio',
 		description: 'Yo! I am Harsha, ì like coding and hardware development. I Have also made a bunch of projects for specific use cases.',
-		url: 'https://your-domain.com',
+		url: 'https://deepanharsha.vercel.app',
 		siteName: 'M Harsha Deepan',
 		images: [
 			{
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'M Harsha Deepan',
 		description: 'Explore my twitter.',
-		creator: '@yourusername',
+		creator: '@deepan_harsha',
 		images: ['/og-image.jpg'],
 	},
 	robots: {
