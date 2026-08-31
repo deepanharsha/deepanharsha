@@ -8,7 +8,7 @@ type Project = {
   description: string;
   details: React.ReactNode[];
   tech: string[];
-  status: 'active' | 'complete' | 'wip';
+  status: 'active' | 'complete' | 'wip' | 'dpd' | 'oh' | 'dp';
 };
 
 const statusConfig = {
