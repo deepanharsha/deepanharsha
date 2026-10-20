@@ -16,8 +16,8 @@ const socials = [
   },
   {
     label: 'Instagram',
-    handle: '@notharsha7',
-    href: 'https://www.instagram.com/notharsha7',
+    handle: '@harsha.deepan',
+    href: 'https://www.instagram.com/harsha.deepan/',
     color: '#f472b6',
     icon: (
       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
