@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import React from 'react';
 
 type Project = {
@@ -9,6 +10,10 @@ type Project = {
   details: React.ReactNode[];
   tech: string[];
   status: 'active' | 'complete' | 'wip' | 'dpd' | 'oh' | 'dp';
+  /** Internal project info page. When set, the title links to it. */
+  href?: string;
+  /** Optional call-to-action button shown at the bottom of the card. */
+  action?: { label: string; href: string };
 };
 
 const statusConfig = {
@@ -21,6 +26,21 @@ const statusConfig = {
 };
 
 const projects: Project[] = [
+  {
+    title: 'ESP-Countdown Timer',
+    tag: 'hardware',
+    description:
+      'Pocket countdown device with an OLED display and a battery-backed clock, configured from a web page over USB. No WiFi needed.',
+    details: [
+      'ESP32-C3 + 128x32 OLED + DS3231 RTC, one-button UI',
+      'Groups of events that auto-advance, with custom 16x16 icons',
+      'Web configurator over USB (Web Serial) with live display mirror',
+    ],
+    tech: ['ESP32-C3', 'C++', 'Arduino', 'Web Serial', 'JavaScript'],
+    status: 'active',
+    href: '/projects/esp-countdown-timer',
+    action: { label: 'Setup/Configure your ESP-Countdown Device', href: '/esp-countdown' },
+  },
   {
     title: 'Blue Horizon WT-172',
     tag: 'aeromodelling',
@@ -117,7 +137,18 @@ export default function SystemArchitecture() {
                         {project.tag}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold" style={{ color: '#f5f5f5' }}>{project.title}</h3>
+                    <h3 className="text-lg font-bold" style={{ color: '#f5f5f5' }}>
+                      {project.href ? (
+                        <Link
+                          href={project.href}
+                          className="underline-offset-4 decoration-green-400/40 hover:underline hover:text-green-400 transition-colors"
+                        >
+                          {project.title} <span className="font-mono text-sm" style={{ color: '#4ade80' }}>→</span>
+                        </Link>
+                      ) : (
+                        project.title
+                      )}
+                    </h3>
                   </div>
                   <div className="flex items-center gap-1.5 shrink-0 mt-1">
                     <div className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: status.color }} />
@@ -151,6 +182,21 @@ export default function SystemArchitecture() {
                     </span>
                   ))}
                 </div>
+
+                {/* Optional call-to-action (plain <a>: it opens a standalone page, not a Next route) */}
+                {project.action && (
+                  <a
+                    href={project.action.href}
+                    className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-md text-sm font-mono transition-colors hover:bg-green-500/20"
+                    style={{
+                      background: 'rgba(74,222,128,0.08)',
+                      border: '1px solid rgba(74,222,128,0.25)',
+                      color: '#4ade80',
+                    }}
+                  >
+                    <span aria-hidden>⚙</span> {project.action.label}
+                  </a>
+                )}
               </motion.div>
             );
           })}
