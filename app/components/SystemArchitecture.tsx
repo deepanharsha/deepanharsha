@@ -37,9 +37,9 @@ const projects: Project[] = [
       'Web configurator over USB (Web Serial) with live display mirror',
     ],
     tech: ['ESP32-C3', 'C++', 'Arduino', 'Web Serial', 'JavaScript'],
-    status: 'active',
-    href: '/projects/esp-countdown-timer',
-    action: { label: 'Setup/Configure your ESP-Countdown Device', href: '/esp-countdown' },
+    status: 'dropped',
+    href: 'https://deepanharsha.vercel.app/project-unavailable',
+    action: { label: 'Setup/Configure your ESP-Countdown Device', href: 'https://deepanharsha.vercel.app/project-unavailable' },
   },
   {
     title: 'Blue Horizon WT-172',
