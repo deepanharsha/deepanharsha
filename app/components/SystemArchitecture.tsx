@@ -9,7 +9,7 @@ type Project = {
   description: string;
   details: React.ReactNode[];
   tech: string[];
-  status: 'active' | 'complete' | 'wip' | 'dpd' | 'oh' | 'dp';
+  status: 'active' | 'complete' | 'wip' | 'dpd' | 'oh' | 'dp' | 'tbs';
   /** Internal project info page. When set, the title links to it. */
   href?: string;
   /** Optional call-to-action button shown at the bottom of the card. */
@@ -23,6 +23,7 @@ const statusConfig = {
   dpd: { label: 'dropped', color: '#f87171' },
   oh: { label: 'on hold', color: '#facc15' },
   dp: { label: 'deprecated', color: '#9ca3af' },
+  tbs: {label: 'yet to start', color: '#c084fc' },
 };
 
 const projects: Project[] = [
@@ -37,7 +38,7 @@ const projects: Project[] = [
       'Web configurator over USB (Web Serial) with live display mirror',
     ],
     tech: ['ESP32-C3', 'C++', 'Arduino', 'Web Serial', 'JavaScript'],
-    status: 'dpd',
+    status: 'dp',
     href: '/project-unavailable',
     action: { label: 'Setup/Configure your ESP-Countdown Device', href: '/project-unavailable' },
   },
@@ -46,8 +47,8 @@ const projects: Project[] = [
     tag: 'aeromodelling',
     description: 'Fixed-wing model aircraft, ~1 kg. Inspired by the Cessna 172.',
     details: [
-      'Airborne — flight testing in progress',
-      'Currently in prototyping stage',
+      'can move in land. - airflight attempted, but provided minor outcomes and did not become airborne.',
+      'Must remodel as first attempt was a failure.',
       <>
         Docs:{' '}
         <a href="https://bluehorizonair.vercel.app/" target="_blank" rel="noopener noreferrer"
@@ -56,8 +57,8 @@ const projects: Project[] = [
         </a>
       </>,
     ],
-    tech: ['AFDHS', 'Electronics', 'Aeromodelling'],
-    status: 'dpd',
+    tech: ['Aero', 'Electronics', 'Aeromodelling'],
+    status: 'tbs',
   },
   {
     title: 'YTGet',
